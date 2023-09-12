@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<article id="/" class="panel intro">
+    <div class="inicio">
+      <section class="intro-content">
+        <div class="intro-text">
+          <h2>Welcome to my website!</h2>
+          <h2>I am MEDI CARLOS EMANUEL</h2>
+          <ul class="personal-info">
+            <li><strong>Email:ch4rl1e005@outlook.es</strong>
+                <button class="email-button">
+                    <a href="mailto:ch4rl1e005@outlook.es" target="_blank">Email Me (Click Here)</a>
+                </button>																		
+            </li>
+            <li><strong>Location: Mar Del Plata, Buenos Aires, Argentina</strong><button class="google-maps-button">
+                    <a href="https://www.google.com/maps?q=Mar+Del+Plata,+Buenos+Aires,+Argentina" target="_blank">View on Maps (Click here)</a>
+                  </button>											  
+            </li>
+          </ul>
+        </div>
+        <div class="intro-image">
+          <img src="{{ url_for('static', filename='images/me.png') }}" alt="My Image">
+        </div>
+      </section>
+    </div>
+  </article>
+{% endblock %}

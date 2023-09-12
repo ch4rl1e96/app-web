@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contenido-formulario">
+    <h1>Publicar Proyecto</h1>
+    <form method="POST" action="{{ url_for('publicar_proyecto') }}">           
+        <div class="mb-3">
+            <label for="titulo" class="form-label label-above">Título del Proyecto</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="descripcion" class="form-label label-above">Descripción del Proyecto</label>
+            <textarea class="form-control" id="descripcion" name="descripcion" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Publicar</button>
+    </form>
+
+
+    <div class="contenido-centrado">
+        <h2>Proyectos existentes</h2>
+        <table class="table tabla-registro">
+            <thead>
+                <tr>
+                    <th scope="col">Título</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                    <tr>
+                        <td>{{ project[1] }}</td>
+                        <td><pre>{{ project[2] }}</pre></td>
+                        <td>
+                            <a href="{{ url_for('editar_proyecto', proyecto_id=project[0]) }}" class="btn btn-warning">Editar</a>
+                            <a href="{{ url_for('eliminar_proyecto', proyecto_id=project[0]) }}" class="btn btn-danger">Eliminar</a>       
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+ </tbody>
+</div>
+{% endblock %}

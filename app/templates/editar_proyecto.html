@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contenido-formulario">
+    <h1>Editar Proyecto</h1>
+    <form method="POST" action="{{ url_for('editar_proyecto', proyecto_id=proyecto[0]) }}">           
+        <div class="mb-3">
+            <label for="nuevo_titulo" class="form-label label-above">Nuevo Título del Proyecto</label>
+            <input type="text" class="form-control" id="nuevo_titulo" name="nuevo_titulo" value="{{ proyecto[1] }}" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="nueva_descripcion" class="form-label label-above">Nueva Descripción del Proyecto</label>
+            <textarea class="form-control" id="nueva_descripcion" name="nueva_descripcion" rows="4" required>{{ proyecto[2] }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+</div>
+{% endblock %}

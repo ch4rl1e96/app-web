@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main-container">
+    <div class="project-box">
+        <h2>Projects</h2>
+        {% for project in projects %}
+        <div class="project">
+            <h3>{{ project[0] }}</h3>
+            <code class="code-block">
+                {{ project[1] | safe }}
+            </code>
+            <button class="btnCopy" onclick="copyCode(this)">Copy</button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

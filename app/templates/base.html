@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+			<title>Ch4rl1e005</title>
+			<link rel="icon" href="{{ url_for('static', filename='images/mask.png') }}" type="image/png">
+			<meta charset="utf-8" />
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/layut.css') }}" />
+			<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+			<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>			
+		</head>
+		<body> 
+			<div class="header">
+				<div class="wrapper">
+					<div>
+					  <nav id="nav" class="sidebar">
+						<div class="user">
+						  <img src="{{ url_for('static', filename='images/me.png') }}" alt="user-icon" class="user-icon">
+						</div>
+						
+						
+						<ul>
+						  <li class="home">
+							<img src="{{ url_for('static', filename='icons/home.png') }}" alt="home-icon" class="icon">
+							<a href="/">Home</a>
+						  </li>
+
+						  {% if current_user.is_authenticated %}
+						  <li class="publicar">
+							<img src="{{ url_for('static', filename='icons/publicar.png') }}" alt="publicar" class="icon">
+							<a href="publicar_proyecto">Publicar</a>
+						  </li> 
+						  {% else %}
+						  <li class="projects">
+							<img src="{{ url_for('static', filename='icons/code.png') }}" alt="code-icon" class="icon">
+							<a href="projects">Projects</a>
+						  </li>
+						  {% endif %}
+						 
+						  <li class="about">
+							<img src="{{ url_for('static', filename='icons/about.png') }}" alt="about-icon" class="icon">
+							<a href="about">About</a>
+						  </li>
+						  <li class="work">
+							<img src="{{ url_for('static', filename='icons/work.png') }}" alt="work-icon" class="icon">
+							<a href="Experience">Experience</a>
+						  </li>
+						  <li class="education">
+							<img src="{{ url_for('static', filename='icons/education.png') }}" alt="education-icon" class="icon">
+							<a href="Education">Education</a>
+						  </li>
+						  {% if current_user.is_authenticated %}
+<li class="logout-img">
+    <form action="{{ url_for('logout') }}" method="post">
+        <button type="submit" class="btn-link-with-icon">
+            <img src="{{ url_for('static', filename='icons/exit.png') }}" alt="logout-icon" class="icon">
+            Cerrar Sesión
+        </button>
+    </form>
+</li>
+{% else %}
+<li class="login-img">
+    <img src="{{ url_for('static', filename='icons/login.png') }}" alt="login-icon" class="icon">
+    <a href="login">Admin</a>
+</li>
+{% endif %}
+
+				  
+						</ul>
+					  </nav>
+					</div>
+				  </div>
+			    </div>
+				<div id="content">
+					{% block content %}{% endblock %}
+				</div>
+			
+			
+
+				  
+	</body>
+</html>

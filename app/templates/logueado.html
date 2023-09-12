@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% block title %}Home{% endblock %}
+  
+  <div class="mensaje-admin">
+    <h1>Welcome {{ current_user.fullname }}!</h1>
+    <h2>Publica tus proyectos en la pestaña "Publicar Proyecto". Recuerda que esta página de bienvenida está oculta y solo podrás publicar tus proyectos. Si cierras sesión e inicias de nuevo, puedes volver.</h2>
+    <a href="{{ url_for('publicar_proyecto') }}" class="btn btn-primary">Publicar un proyecto</a>
+
+  </div>
+
+{% endblock %}
+

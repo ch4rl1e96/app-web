@@ -1,0 +1,574 @@
+
+/* Estilos body general y side bar abajo*/
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('/static/images/fondo.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+
+/* Resto de tus estilos */
+
+.sidebar{
+  width: 140px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: width 0.5s;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Alinea la imagen al centro vertical y horizontalmente */
+  width: 70px; /* Asegúrate de que el ancho del contenedor sea igual al de la imagen */
+  height: 70px; /* Asegúrate de que la altura del contenedor sea igual al de la imagen */
+  font-size: 12px;
+  padding: 10px;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  overflow: hidden;
+}
+
+.user-icon {
+  width:70%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+  border-radius: 70%; /* Cambia esto a 50% para un círculo perfecto */
+  margin: 0 auto; /* Elimina cualquier margen para evitar espacios innecesarios */
+}
+
+
+ul{
+  margin: 5px;
+  width: 60% auto;
+  height: 30% auto;
+  justify-content: left;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0 15px;
+  display: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  transition: transform 0.5s ease;
+}
+
+ul li{
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Agregamos una transición para suavizar el efecto */
+}
+
+ul li img{
+  width: 30px;
+  margin-right: 0px;
+}
+
+ul li p{
+  white-space: nowrap;
+  display: none;
+}
+
+/* Contenido principal */
+.intro-content {
+  display: flex;
+  align-items: center;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro-image img {
+  max-width: 250px; /* Ajusta el tamaño de la imagen según tu preferencia */
+}
+
+.sidebar:hover{
+  width: 250px;
+}
+
+.sidebar:hover ul {
+  transform: translateX(50px); /* Desplazamiento horizontal para centrar los elementos */
+}
+
+
+/* Estilos para los botones nav */
+#nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#nav li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+}
+
+#nav .icon {
+  width: 30px; /* Ancho de los íconos */
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+#nav a {
+  text-decoration: none;
+  color: white; /* Color del texto de enlace */
+  font-weight: bold; /* Puedes ajustar el peso de la fuente */
+}
+
+#nav a:hover {
+  text-decoration: underline; /* Efecto al pasar el mouse por encima */
+}
+
+
+
+#nav ul li:hover {
+  transform: scale(1.2); /* Escala el elemento al 120% cuando el mouse se posa sobre él */
+}
+
+
+/* Resto de tus estilos */
+
+.project-box {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(247, 247, 247, 0.8);
+    box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project {
+  margin: 15px 0; /* Espacio entre proyectos (verticalmente) */
+  background-color: #fff; /* Color de fondo del proyecto */
+  border: 1px solid #ddd; /* Borde alrededor del proyecto */
+  border-radius: 10px; /* Bordes redondeados para el proyecto */
+  padding: 20px; /* Espacio dentro del proyecto */
+  text-align: left; /* Centra horizontalmente */
+}
+
+
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+
+.code-block{
+    margin-bottom: 20px;
+    max-width: 300px;
+    box-shadow: 0;
+    background-color: #000000;
+    margin-bottom: 20px;
+    color: #f9f9f9;
+}
+
+
+.code-fondo{
+  text-decoration-color: #fcfcfc;
+  background-color: #000000;
+  border-radius: 4px;
+}
+
+
+.inicio{
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1); /* Sombra con mayor contraste */
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.intro-image img{
+  float: right;
+  border-radius: 10px;
+  border: 1px solid #0c0b0b;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix {
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.intro-image {
+  flex: 0 0 auto; /* No se expandirá ni contraerá, tamaño automático */
+  margin-right: 10px; /* Margen entre la imagen y el texto */
+}
+
+.google-maps-button {
+  background-color: #4285f4; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none;
+  padding: 5px 10px; /* Espaciado interno del botón (ajusta según lo necesites) */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  display: inline-flex; /* Para alinear el botón y el texto horizontalmente */
+  align-items: center; /* Para centrar verticalmente el contenido del botón */
+}
+
+.google-maps-button a {
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  color: rgb(245, 245, 245); /* Color del texto del enlace */
+  margin-left: 5px; /* Espacio entre el botón y el texto (ajusta según lo necesites) */
+}
+
+.google-maps-button:hover {
+  background-color: #ff0404; /* Cambia el color de fondo al pasar el mouse */
+}
+
+a {
+  text-decoration: none;
+}
+.email-button {
+  background-color: #2958d9; /* Color de fondo */
+  color: rgb(245, 245, 245);
+  padding: 5px 10px; /* Espaciado interno */
+  border: none; /* Quitamos el borde */
+  border-radius: 5px; /* Borde redondeado */
+  cursor: pointer; /* Cambiamos el cursor al pasar el mouse */
+  font-size: 14px; /* Tamaño del texto */
+  margin-right: 10px; /* Margen derecho para separar del botón de Google Maps */
+}
+
+.email-button a{
+  color: rgb(245, 245, 245);
+}
+
+.email-button:hover {
+  background-color: #ff0404; /* Cambiamos el color de fondo al pasar el mouse */
+}
+
+  .cv-container{
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1); /* Sombra con mayor contraste */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  }
+
+  .cv-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .personal-info {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .personal-info li {
+    margin-bottom: 10px;
+  }
+
+  .personal-info li strong {
+    margin-right: 5px;
+  }
+  
+  .skills-container {
+    background-color: rgba(247, 247, 247, 0.8); /* Fondo semi-transparente */
+    box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1); /* Sombra con mayor contraste */
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  .skills-container h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: auto;
+  }
+
+  .skills-container ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .skills-container li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .skills-container li .stars {
+    margin-left: 10px;
+    color: #ffc107;
+    font-weight: bold;
+  }
+
+  
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .programming-skills ul,
+  .general-skills ul,
+  .languages ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .stars {
+    color: yellow;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .experience-container {
+  text-align: center;
+  margin-bottom: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1); /* Sombra con mayor contraste */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px; /* Agregamos margen inferior */
+}
+
+.experience-container ul {
+  padding-left: 0;
+}
+
+.experience-container li {
+  margin-bottom: 20px;
+}
+
+.experience-container li h3 {
+  margin-bottom: 5px;
+}
+
+.experience-container li strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.experience-container .strong {
+  text-align: left;
+}
+
+.education-container {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1); /* Sombra con mayor contraste */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+
+  }
+
+  .education-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Cambia el color del texto si es necesario */
+}
+
+/* Estilo para cada sección de educación */
+.education-container li {
+    margin-bottom: 20px;
+}
+
+.education-container li .date {
+    font-weight: bold;
+    color: #666; /* Cambia el color de la fecha si es necesario */
+}
+
+.education-container li .education-info strong {
+    color: #888; /* Cambia el color del título de educación si es necesario */
+}
+
+.education-container li .subtitle {
+    color: #888; /* Cambia el color del subtítulo si es necesario */
+}
+
+.education-container li p {
+    color: #777; /* Cambia el color del texto adicional si es necesario */
+}
+
+
+/*login*/
+
+.my-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.5); /* Fondo gris semi transparente */
+}
+
+.my-form {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi transparente */
+  padding: 20px;
+  border-radius: 10px; /* Borde redondeado */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+
+.profile-image-pic {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+}
+
+.btn-link-with-icon {
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-size: 16px; /* Ajusta el tamaño del texto según sea necesario */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.btn-link-with-icon img {
+  margin-right: 5px; /* Espacio entre el ícono y el texto, ajusta según sea necesario */
+}
+
+
+.mensaje-admin {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1); /* Sombra con mayor contraste */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;  
+}
+
+.contenido{
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1); /* Sombra con mayor contraste */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;  
+}
+.mb-a{
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-size: 16px; /* Ajusta el tamaño del texto según sea necesario */
+  cursor: pointer;
+  display: block;
+  margin-bottom: 5px;
+}
+.label-above {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tabla-registro {
+  width: 100%; /* Ancho de la tabla al 100% del contenedor */
+  border-collapse: collapse; /* Colapsar bordes de celdas */
+}
+
+.contenido-formulario{
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(247, 247, 247, 0.8); /* Fondo semi-transparente */
+  box-shadow: 0 2px 4px rgba(247, 247, 247, 0.1); /* Sombra con mayor contraste */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.contenido-centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Para centrar el texto horizontalmente */
+}
+/* Agregar estilo a la tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Estilo para los botones Editar y Eliminar */
+.btn-warning,
+.btn-danger {
+  padding: 5px 10px;
+  margin-right: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+}
+
+.btn-danger {
+  background-color: #ff0000;
+}
+
+.btn-warning:hover,
+.btn-danger:hover {
+  background-color: #ffbf00;
+}
