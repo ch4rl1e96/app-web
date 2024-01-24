@@ -1,0 +1,1 @@
+This is a web application project of my own resume, built with Python using the Flask framework. The project features user login and an administrator key queried from an SQL database. The password grants access to an editor mode where a project can be published with its title and description. The goal is to make it visible to the public view without users.
